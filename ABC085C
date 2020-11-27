@@ -1,0 +1,27 @@
+def func():
+    # Use a breakpoint in the code line below to debug your script.
+    Input = list(map(int, input().split()))
+    n = Input[0]
+    v = Input[1]
+    isFind = False
+ 
+    #print(n, v)
+ 
+    for i in range(0, n + 1):
+        for j in range(0, n + 1 - i):
+            #for k in range(0, n + 1 - i - j):
+            k = n - i - j
+            sumV = i * 10000 + j * 5000 + k * 1000
+            if sumV == v and i + j + k == n:
+                print("{0} {1} {2}".format(i, j, k))
+                #print(i+j+k, sumV)
+                isFind = True
+                return
+ 
+    if isFind == False:
+        print("-1 -1 -1")
+ 
+ 
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    func()
