@@ -1,0 +1,98 @@
+import re
+ 
+def func():
+    # Use a breakpoint in the code line below to debug your script.
+    ans = ["dream", "erase"]
+    ansD = ["dreamer", "dream"]
+    ansE = ["erase", "eraser"]
+    str = input()
+ 
+    while True:
+        #print(str)
+        if str == "":
+            print("YES")
+            return
+        isMatch = False
+        for a in ans:
+            if str.startswith(a):
+                isMatch = True
+                if a == "dream":
+                    if str.startswith("dreamer") == False:
+                        str = re.sub("^dream", "", str)
+                    else:
+                        #print("Here?")
+                        if str.startswith("dreameraser"):
+                            str = re.sub("^dreameraser", "", str)
+                        elif str.startswith("dreamerase"):
+                            str = re.sub("^dreamerase", "", str)
+                        else:
+                            str = re.sub("^dreamer", "", str)
+ 
+ 
+                elif a == "erase":
+                    if str.startswith("eraser") == True:
+                        str = re.sub("^eraser", "", str)
+                    else:
+                        str = re.sub("^erase", "", str)
+ 
+        if isMatch == False:
+                break
+ 
+    print("NO")
+ 
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    func()
+ 
+# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# This is a sample Python script.
+
+# Press ⌃R to execute it or replace it with your code.
+# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+import re
+
+def func():
+    # Use a breakpoint in the code line below to debug your script.
+    ans = ["dream", "erase"]
+    ansD = ["dreamer", "dream"]
+    ansE = ["erase", "eraser"]
+    str = input()
+
+    while True:
+        #print(str)
+        if str == "":
+            print("YES")
+            return
+        isMatch = False
+        for a in ans:
+            if str.startswith(a):
+                isMatch = True
+                if a == "dream":
+                    if str.startswith("dreamer") == False:
+                        str = re.sub("^dream", "", str)
+                    else:
+                        #print("Here?")
+                        if str.startswith("dreameraser"):
+                            str = re.sub("^dreameraser", "", str)
+                        elif str.startswith("dreamerase"):
+                            str = re.sub("^dreamerase", "", str)
+                        else:
+                            str = re.sub("^dreamer", "", str)
+
+
+                elif a == "erase":
+                    if str.startswith("eraser") == True:
+                        str = re.sub("^eraser", "", str)
+                    else:
+                        str = re.sub("^erase", "", str)
+
+        if isMatch == False:
+                break
+
+    print("NO")
+
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    func()
+
+# See PyCharm help at https://www.jetbrains.com/help/pycharm/
