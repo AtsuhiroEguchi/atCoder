@@ -1,0 +1,24 @@
+n = int(input())
+sArray = input().split()
+counter = 0
+ 
+array = []
+ 
+for s in sArray:
+  array.append(int(s))
+  
+flag = True
+array2 = []
+ 
+while(flag == True):
+  for v in array:
+    if v%2 == 1:
+      flag = False
+      break
+ 
+  if flag == True:
+    counter += 1
+    for i in range(len(array)):
+      array[i] = array[i]/2
+ 
+print(counter)
