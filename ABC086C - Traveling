@@ -1,0 +1,46 @@
+def func():
+    # Use a breakpoint in the code line below to debug your script.
+    N = int(input())
+    isTrue = True
+    nowTime = 0
+    nowX = 0
+    nowY = 0
+ 
+    while(True):
+        try:
+ 
+            tmp = list(map(int, input().split()))
+            t = tmp[0] - nowTime
+            x = abs(nowX - tmp[1])
+            y = abs(nowY - tmp[2])
+            #print(t, x, y)
+ 
+            step = t - y
+            step = step - x
+ 
+            #print(step, t, x, y)
+ 
+            if step < 0:
+                isTrue = False
+            elif step == 0 or step%2 == 0:
+                pass
+            elif step%2 != 0:
+                isTrue = False
+                break
+ 
+            nowTime = tmp[0]
+            nowX = tmp[1]
+            nowY = tmp[2]
+ 
+        except EOFError:
+            break
+ 
+    if isTrue == True:
+        print("Yes")
+    else:
+        print("No")
+ 
+ 
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    func()
