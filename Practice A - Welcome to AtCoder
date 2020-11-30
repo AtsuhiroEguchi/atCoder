@@ -1,0 +1,10 @@
+a = int(input())
+second = input()
+secondList = second.split()
+b = int(secondList[0])
+c = int(secondList[1])
+ 
+s = input()
+ 
+sum = a + b + c
+print("{0} {1}".format(sum, s))
