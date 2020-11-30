@@ -1,0 +1,34 @@
+alice = []
+bob = []
+isAliceTurn = True
+ 
+n = input()
+s = input().split()
+array = []
+ 
+for v in s:
+    array.append(int(v))
+ 
+#print(array)
+ 
+array.sort()
+ 
+while len(array) != 0:
+ 
+    if isAliceTurn == True:
+        alice.append(array.pop())
+        isAliceTurn = False
+    else:
+        bob.append(array.pop())
+        isAliceTurn = True
+ 
+aSum = 0
+bSum = 0
+ 
+for v in alice:
+    aSum += v
+ 
+for v in bob:
+    bSum += v
+ 
+print(aSum - bSum)
