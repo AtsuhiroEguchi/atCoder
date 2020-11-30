@@ -1,0 +1,46 @@
+def func():
+    N, X = map(int, input().split())
+    S = input()
+    counter = X
+ 
+    for i in range(N):
+        if S[i] == "o":
+            counter += 1
+ 
+        elif S[i] == "x":
+            if counter >= 1:
+                counter -= 1
+ 
+    print(counter)
+ 
+ 
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    func()
+ 
+# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# This is a sample Python script.
+
+# Press ⌃R to execute it or replace it with your code.
+# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+
+
+def func():
+    N, X = map(int, input().split())
+    S = input()
+    counter = X
+
+    for i in range(N):
+        if S[i] == "o":
+            counter += 1
+
+        elif S[i] == "x":
+            if counter >= 1:
+                counter -= 1
+
+    print(counter)
+
+
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    func()
