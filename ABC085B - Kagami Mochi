@@ -1,0 +1,32 @@
+def mochi(name):
+    # Use a breakpoint in the code line below to debug your script.
+    #print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+    n = input()
+    array = []
+    counter = 0
+    currentMochi = 0
+ 
+    while(True):
+        try:
+            array.append(int(input()))
+        except EOFError:
+            break
+ 
+    array.sort()
+    #print(array)
+ 
+    for v in array:
+        if currentMochi < v:
+            counter += 1
+            currentMochi = v
+ 
+    print(counter)
+ 
+ 
+ 
+ 
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    mochi('PyCharm')
+ 
+# See PyCharm help at https://www.jetbrains.com/help/pycharm/
