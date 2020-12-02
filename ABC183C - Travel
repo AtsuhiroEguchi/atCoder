@@ -1,0 +1,34 @@
+import itertools
+ 
+def func():
+    N, K = map(int, input().split())
+ 
+    counter = 0
+    paths = []
+    costs = [[0] * N for j in range(N)]
+ 
+    for i in range(N):
+        costs[i] = list(map(int, input().split()))
+ 
+    #print(costs)
+    #print(costs[0][3])
+ 
+    for i in range(1, N):
+        paths.append(i + 1)
+ 
+    for v in itertools.permutations(paths):
+        pv = 1
+        sumV = 0
+        for vv in v:
+            #print(previous, vv)
+            sumV += costs[pv - 1][vv - 1]
+            pv = vv
+        sumV += costs[vv - 1][0]
+        if sumV == K:
+            counter += 1
+ 
+    print(counter)
+ 
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    func()
