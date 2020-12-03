@@ -1,0 +1,68 @@
+def make_patarns(n, a, prog, result):
+    if (n == 0):
+        result.append(prog)
+        return
+ 
+    for i in range(len(a)):
+        make_patarns(n - 1, a, prog + [a[i]], result)
+ 
+def listToNum(a):
+    result = 0
+ 
+    for i in range(len(a) - 1, -1, -1):
+        result += a[i] * 10 ** (len(a) - 1 - i)
+ 
+    return result
+ 
+ 
+def func():
+    N = input()
+    a = []
+ 
+    if int(N) % 3 == 0:
+        print(0)
+        return
+ 
+    l = len(str(N))
+    a = list(map(int, list(N)))
+ 
+    result = []
+    removed = []
+    make_patarns(l, [0, 1], [], result)
+ 
+    for v in result:
+        tmp = a.copy()
+        for i, vv in enumerate(v):
+            if vv == 0:
+                tmp[i] = 0
+ 
+        while(True):
+            if 0 in tmp:
+                tmp.remove(0)
+            else:
+                break
+ 
+        #print(str(tmp))
+        removed.append(tmp)
+ 
+    #print(len(result))
+    #print(len(removed))
+    #print(a, l)
+ 
+    maxL = 0
+ 
+    for v in removed:
+        if listToNum(v) % 3 == 0:
+            #print(v, len(v))
+            if len(v) > maxL:
+                maxL = len(v)
+ 
+    if maxL != 0:
+        print(l - maxL)
+    else:
+        print(-1)
+ 
+ 
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    func()
