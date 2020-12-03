@@ -1,0 +1,28 @@
+def func():
+    N = int(input())
+    a = list(map(int, input().split()))
+    Amax = max(a)
+ 
+    maxGCD = 0
+    maxGCDi = 0
+ 
+    for i in range(2, Amax + 1):
+        GCD = 0
+        for v in a:
+            if v%i == 0:
+                GCD += 1
+ 
+        if maxGCD <= GCD:
+            maxGCD = GCD
+            maxGCDi = i
+ 
+        #if GCD != 0:
+            #print(i, GCD)
+ 
+    print(maxGCDi)
+ 
+ 
+ 
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    func()
