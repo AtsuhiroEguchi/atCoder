@@ -1,0 +1,22 @@
+def func():
+    N = int(input())
+    allSum = 0
+    wa = 0
+    ta = []
+ 
+    for i in range(N):
+        ta = list(map(int, input().split()))
+        #for j in range(ta[0], ta[1] + 1, 1):
+        wa = int(ta[1] * (ta[1] + 1)/2 - ((ta[0] - 1) * ((ta[0] - 1)+ 1)/2))
+        allSum += wa
+ 
+        #print(wa)
+ 
+ 
+    print(allSum)
+ 
+ 
+ 
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    func()
