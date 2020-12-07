@@ -1,0 +1,26 @@
+import math
+ 
+def func():
+    N = int(input())
+ 
+    a = list(map(int, input().split()))
+    a = list(map(abs, a))
+ 
+    M = 0
+    E = 0
+    for v in a:
+        M += abs(v)
+        E += v*v
+ 
+    E = math.sqrt(E)
+ 
+    C = max(a)
+ 
+    print(M)
+    print(E)
+    print(C)
+ 
+ 
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    func()
