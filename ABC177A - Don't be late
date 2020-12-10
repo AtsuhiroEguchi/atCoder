@@ -1,0 +1,6 @@
+D, T, V = map(int, input().split())
+ 
+if (D/V <= T):
+  print('Yes')
+else:
+  print('No')
