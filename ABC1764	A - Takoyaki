@@ -1,0 +1,6 @@
+import math
+ 
+N, X, T = map(int, input().split())
+t = math.ceil(N/X)
+ 
+print(t * T)
