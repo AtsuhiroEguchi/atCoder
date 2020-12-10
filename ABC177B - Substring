@@ -1,0 +1,23 @@
+def func():
+    S = input()
+    T = input()
+ 
+    maxCounter = 0
+    for i in range(len(S) - len(T) + 1):
+        counter = 0
+        for j in range(len(T)):
+            if (S[i + j] == T[j]):
+                #print(S[i + j])
+                counter += 1
+ 
+ 
+        if maxCounter < counter:
+            maxCounter = counter
+ 
+    print(len(T) - maxCounter)
+ 
+ 
+ 
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    func()
