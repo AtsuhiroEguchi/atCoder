@@ -1,0 +1,23 @@
+def func():
+    S = list(input())
+    maxC = 0
+    C = 0
+ 
+    for v in S:
+        if v == "R":
+            C += 1
+        else:
+            if maxC < C:
+                maxC = C
+            C = 0
+ 
+ 
+    if maxC < C:
+        print(C)
+    else:
+        print(maxC)
+ 
+ 
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    func()
