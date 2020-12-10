@@ -1,0 +1,23 @@
+def func():
+    n = int(input())
+    a = list(map(int, input().split()))
+ 
+    counter = 0
+    previous = 0
+ 
+    for i in range(len(a)):
+        if a[i] < previous:
+            #print(a[i])
+            diff = previous - a[i]
+            counter += diff
+            a[i] += diff
+ 
+        previous = a[i]
+ 
+    print(counter)
+ 
+ 
+ 
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    func()
