@@ -1,0 +1,27 @@
+def func():
+    N = int(input())
+    A = list(map(int, input().split()))
+ 
+    #print(N)
+    #print(A)
+ 
+    S = 0
+    aSum = sum(A)
+ 
+    for i in range(len(A)):
+        #s = 0
+        #for j in range(i + 1, len(A)):
+            #S += A[i] * A[j]
+            #s += A[j]
+            #print(s)
+            #print(i, j)
+        #print(aSum)
+        aSum = aSum - A[i]
+        S += aSum * A[i]
+ 
+ 
+    print(S %(10**9 + 7))
+ 
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    func()
